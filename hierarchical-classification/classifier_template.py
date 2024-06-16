@@ -4,6 +4,9 @@ class Classifier:
     
     def resize(self):
         raise NotImplementedError
+    
+    def train(self):
+        raise NotImplementedError
 
     def to_next_classifier(self):
         raise NotImplementedError
