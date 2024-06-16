@@ -1,10 +1,12 @@
 ## A Lightweight Hierarchical Classification Library
 
-### HIGH LEVEL FUNCTIONALITY:
-    - Swappable classifiers at each parent node
-    - Dynamic heirarchy definitions
-        - Minimal overhead when moving labels across leaf nodes
-    - Distributed training/inference (?)
+### High Level Functionality:
+- Swappable classifiers at each parent node
+- Dynamic heirarchy definitions
+    - Minimal overhead when moving labels across leaf nodes
+- Distributed training/inference (?)
+
+### Further Details
 
 1. Root is a binary classifier which determines whether or not the sound is YES_CONSTRUCTION or NO_CONSTRUCTIOn
     - Since it is a multi-label problem, if an output passes the threshold for both yes and no, it will be sent to both
