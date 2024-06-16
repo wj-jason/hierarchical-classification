@@ -7,6 +7,9 @@ class Classifier:
     
     def train(self):
         raise NotImplementedError
+    
+    def binary_predictions(self):
+        raise NotImplementedError
 
     def to_next_classifier(self):
         raise NotImplementedError

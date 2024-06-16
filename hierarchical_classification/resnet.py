@@ -53,8 +53,7 @@ class Resnet50(Classifier):
         metrics: list = ['accuracy'],
         epochs: int = 50,
         batch_size: int = 32,
-        validation_split: float = 0.2,
-        threshold: float = 0.5
+        validation_split: float = 0.2
     ) -> np.array:
         
         # setup
@@ -80,11 +79,18 @@ class Resnet50(Classifier):
             callbacks=[early_stopping]
         )
 
-        # predict
-        predictions = self.model.predict(X)
-        binary_predictions = (predictions > threshold).astype(int)
+        # # predict
+        # predictions = self.model.predict(X)
+        # binary_predictions = (predictions > threshold).astype(int)
 
-        return binary_predictions
+        # return binary_predictions
+
+    def binary_predictions(
+        self,
+        X: np.array,
+        threshold: float = 0.50
+    ) -> np.array:
+        return (self.model.predict(X) > threshold).astype(int)
 
     def to_next_classifier(
         self,
