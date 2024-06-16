@@ -28,7 +28,7 @@ class Resnet50(Classifier):
         x = GlobalAveragePooling2D()(x)
         output_tensor = Dense(num_classes, activation='sigmoid')(x)
 
-        self.model = Model(input=base_model.input, outputs=output_tensor)
+        self.model = Model(inputs=base_model.input, outputs=output_tensor)
     
     def resize(
         self, 
