@@ -1,1 +1,1 @@
-## Lightweight Hierarchical Classification Tool
+## A Lightweight Hierarchical Classification Library
